@@ -26,12 +26,7 @@ body {
 .main {
   padding: 2rem;
 }
-/*--------------------------------------------*/
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
 .filter-group,
 .filter-house {
   display: flex; /* Diseño flexible */
@@ -43,7 +38,35 @@ body {
 .filter-house {
   gap: 3.2rem;
 }
+/*--------------------------------------------*/
 .list-title {
   text-align: center;
   margin-bottom: 3rem;
+}
+.list-card {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  border: 1px solid rgba(131, 4, 4, 0.438);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit; /* Hereda el color del body (blanco en tu caso) */
+  display: block; /* Para que toda la tarjeta sea cliqueable */
+  padding: 2rem; /* Espaciado interno */
 }
