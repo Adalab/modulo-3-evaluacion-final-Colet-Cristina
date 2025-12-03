@@ -5,11 +5,11 @@ import "../styles/App.scss";
 import { useState, useEffect } from "react";
 
 // Componentes
-/* import { Route, Routes } from "react-router"; */
+import { Route, Routes } from "react-router";
 import Header from "./layaut/header";
 import CharacterList from "./listing/CharacterList";
 import PlaceholderImage from "/public/placeholder.png";
-/* import CharacterDetails from "./pages/CharacterDetails"; */
+import CharacterDetails from "./pages/CharacterDetails";
 import FilterName from "./filters/FilterName";
 import FilterHouse from "./filters/FilterHouse";
 
@@ -22,7 +22,7 @@ function App() {
   const handleFilterName = (ev) => {
     setfilterName(ev.target.value);
   };
-  const [filterHouse, setFilterHouse] = useState("");
+  const [filterHouse, setFilterHouse] = useState("Gryffindor");
   const handleFilterHouse = (ev) => {
     setFilterHouse(ev.target.value);
   };
@@ -56,10 +56,13 @@ function App() {
         .includes(filterName.toLocaleLowerCase())
     )
     .filter((eachCharacter) =>
-      (eachCharacter.House || "")
+      (eachCharacter.house || "")
         .toLocaleLowerCase()
         .includes(filterHouse.toLocaleLowerCase())
     );
+  const findCharacter = (idToFind) => {
+    return allCharacters.find((char) => char.id === idToFind);
+  };
 
   return (
     <div>
@@ -67,25 +70,33 @@ function App() {
 
       {/* -----------------------------main --------------------------------------*/}
       <main className="main">
-        {/*  <Routes>
-          <Route path="/details" element={<CharacterDetails />} />
-        </Routes> */}
-        <div className="container">
-          {/* --------------------------- Filtro personaje  ---------------------------*/}
-          <FilterName
-            handleFilterName={handleFilterName}
-            filterName={filterName}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="container">
+                {/* --------------------------- Filtro personaje  ---------------------------*/}
+                <FilterName
+                  handleFilterName={handleFilterName} //función para el filtro
+                  filterName={filterName} //valor del filtro
+                />
+                {/* --------------------------- filtro casa ---------------------------*/}
+                <FilterHouse
+                  handleFilterHouse={handleFilterHouse} //función para el filtro
+                  filterHouse={filterHouse} //valor del filtro
+                />
+                {/* --------------------------- lista ---------------------------*/}
+                <h2 className="list-title"> Lista personajes </h2>
+                <CharacterList characters={filteredCharacters} />
+                {/* ---------------------------  ---------------------------*/}
+              </div>
+            }
           />
-          {/* --------------------------- filtro casa ---------------------------*/}
-          <FilterHouse
-            handleFilterHouse={handleFilterHouse}
-            filterHouse={filterHouse}
+          <Route
+            path="/details/:id"
+            element={<CharacterDetails findCharacter={findCharacter} />}
           />
-          {/* --------------------------- lista ---------------------------*/}
-          <h2 className="list-title"> Lista personajes </h2>
-          <CharacterList characters={filteredCharacters} />
-          {/* ---------------------------  ---------------------------*/}
-        </div>
+        </Routes>
       </main>
     </div>
   );

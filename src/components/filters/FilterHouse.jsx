@@ -4,7 +4,12 @@ function FilterHouse({ handleFilterHouse, filterHouse }) {
       <label htmlFor="filterByHouse" className="label-house">
         Casa
       </label>
-      <select className="filter-select" id="filterByHouse">
+      <select
+        className="filter-select"
+        id="filterByHouse"
+        onChange={handleFilterHouse}
+        value={filterHouse}
+      >
         <option value="Gryffindor">Gryffindor</option>
         <option value="Slytherin">Slytherin</option>
         <option value="Hufflepuff">Hufflepuff</option>

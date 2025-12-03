@@ -1,6 +1,7 @@
+import { Link } from "react-router";
 function CharacterCard({ eachCharacter }) {
   return (
-    <a href="#">
+    <Link to={`/details/${eachCharacter.id}`}>
       <img
         className="card_img"
         src={eachCharacter.image}
@@ -12,7 +13,7 @@ function CharacterCard({ eachCharacter }) {
       <p>{eachCharacter.gender}</p>
       <p>{eachCharacter.house}</p>
       <p>{eachCharacter.actor}</p>
-    </a>
+    </Link>
   );
 }
 
