@@ -9,7 +9,6 @@ function CharacterList({ characters }) {
     <ul className="list-card">
       {characters.map((eachCharacter) => (
         <li className="card" key={eachCharacter.id}>
-          {/* Usamos el componente CartItem importado */}
           <CharacterCard eachCharacter={eachCharacter} />
         </li>
       ))}
@@ -17,5 +16,4 @@ function CharacterList({ characters }) {
   );
 }
 
-// Exportamos el componente con el nuevo nombre
 export default CharacterList;

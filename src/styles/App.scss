@@ -5,7 +5,7 @@
 }
 
 :root {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Georgia", serif;
 }
 
 body {
@@ -31,13 +31,38 @@ body {
 .filter-house {
   display: flex; /* Diseño flexible */
   align-items: center; /* Alineación vertical */
-  gap: 1rem;
+  gap: 2rem;
   margin-bottom: 2rem;
 }
 
-.filter-house {
-  gap: 3.2rem;
+.label-character {
+  display: inline-block;
+  border: 0.125rem solid rgba(131, 4, 4, 0.438);
+  padding: 0.3125rem 0.8125rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
 }
+
+.label-house {
+  display: inline-block;
+  border: 0.125rem solid rgba(131, 4, 4, 0.438);
+  padding: 0.3125rem 1.875rem;
+  border-radius: 0.25rem;
+  font-weight: bold; /* Hacer el texto más notable */
+}
+
+.filter-input,
+.filter-select {
+  color: rgba(255, 217, 0, 0.63);
+  padding: 0.3125rem 0.9375rem;
+  width: 15.625rem;
+  display: block;
+  border: 0.09375rem solid #7d1212;
+  border-radius: 0.5rem;
+  background-color: black;
+  resize: none;
+}
+
 /*--------------------------------------------*/
 .list-title {
   text-align: center;
@@ -48,25 +73,30 @@ body {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
   gap: 2rem;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 50rem;
   margin: 0 auto;
 }
 
 .card {
-  border: 1px solid rgba(131, 4, 4, 0.438);
-  border-radius: 8px;
+  border: 0.0625rem solid rgba(131, 4, 4, 0.438);
+  border-radius: 0.5rem;
   overflow: hidden;
   text-align: center;
 }
 
 .card a {
   text-decoration: none;
-  color: inherit; /* Hereda el color del body (blanco en tu caso) */
+  color: inherit;
   display: block; /* Para que toda la tarjeta sea cliqueable */
-  padding: 2rem; /* Espaciado interno */
+  padding: 1.5rem; /* Espaciado interno */
+}
+.card_img {
+  display: block;
+  width: 12.5rem;
+  object-fit: cover;
 }
