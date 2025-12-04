@@ -9,7 +9,7 @@ import { Route, Routes } from "react-router";
 import Header from "./layaut/header";
 import CharacterList from "./listing/CharacterList";
 import PlaceholderImage from "/public/placeholder.png";
-import CharacterDetails from "./pages/CharacterDetails";
+import CharacterDetails from "./pages/DetailsPage";
 import FilterName from "./filters/FilterName";
 import FilterHouse from "./filters/FilterHouse";
 
@@ -86,7 +86,7 @@ function App() {
                   filterHouse={filterHouse} //valor del filtro
                 />
                 {/* --------------------------- lista ---------------------------*/}
-                <h2 className="list-title"> Lista personajes </h2>
+                <h2 className="list-title"> Comunidad de Magos y Brujas </h2>
                 <CharacterList characters={filteredCharacters} />
                 {/* ---------------------------  ---------------------------*/}
               </div>

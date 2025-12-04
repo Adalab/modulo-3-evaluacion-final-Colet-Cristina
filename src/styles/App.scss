@@ -1,3 +1,27 @@
+/*  aparición  */
+@keyframes fadeInPure {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* pulso de brillo */
+@keyframes magicGlow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 217, 0, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 217, 0, 0.9),
+      0 0 20px rgba(255, 217, 0, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 217, 0, 0.5);
+  }
+}
+/*--------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -63,10 +87,14 @@ body {
   resize: none;
 }
 
-/*--------------------------------------------*/
 .list-title {
   text-align: center;
   margin-bottom: 3rem;
+
+  color: #ffd900; /* Color de texto dorado fuerte */
+
+  /* ⬅️ APLICACIÓN DE LA ANIMACIÓN */
+  animation: magicGlow 2s infinite alternate ease-in-out;
 }
 .list-card {
   list-style: none;
@@ -99,4 +127,72 @@ body {
   display: block;
   width: 12.5rem;
   object-fit: cover;
+  margin-bottom: 2rem;
+}
+.card-title {
+  margin-bottom: 1rem;
+}
+/*--------------------------------------------*/
+.details-link {
+  margin: 20rem;
+  padding: 1rem 2rem;
+  border: 0.1rem solid rgba(255, 217, 0, 0.63);
+  background-color: rgba(131, 4, 4, 0.438);
+  color: rgba(255, 217, 0, 0.63);
+  text-decoration: none;
+  border-radius: 0.3rem;
+  font-weight: bold;
+}
+.details-link:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px 5px rgba(255, 217, 0, 0.8),
+    0 0 30px 10px rgba(255, 217, 0, 0.5);
+}
+
+.detail-page {
+  background-color: rgba(131, 4, 4, 0.438);
+  border: 0.3rem solid rgba(255, 217, 0, 0.63);
+  width: 90%;
+  max-width: 500rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.9rem;
+  animation: fadeInPure 1.5s ease-out 0.3s forwards;
+  opacity: 0;
+}
+.detail-img {
+  width: 50%;
+  height: 50%;
+  border: 0.3rem solid black;
+  box-shadow: 0 1rem 0 black, 0 0 1rem 0.1rem black;
+
+  border-radius: 0.3rem;
+}
+.details-link:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(255, 217, 0, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.detail-list h2 {
+  font-size: 3.2rem;
+  margin-top: -5rem;
+  margin-bottom: 3rem;
+}
+
+.detail-list dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.6rem 1rem;
+}
+
+.detail-list dt {
+  font-size: 1.7rem;
+  text-align: right;
+  font-weight: bold;
+}
+.detail-list dd {
+  font-size: 1.5rem; /* 20px */
 }

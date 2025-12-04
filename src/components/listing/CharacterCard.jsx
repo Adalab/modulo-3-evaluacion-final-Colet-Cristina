@@ -8,11 +8,8 @@ function CharacterCard({ eachCharacter }) {
         alt={"Foto de" + eachCharacter.name}
         title={"Foto de" + eachCharacter.name}
       />
-      <h3>{eachCharacter.name}</h3>
-      <p>{eachCharacter.species}</p>
-      <p>{eachCharacter.gender}</p>
+      <h3 className="card-title">{eachCharacter.name}</h3>
       <p>{eachCharacter.house}</p>
-      <p>{eachCharacter.actor}</p>
     </Link>
   );
 }
