@@ -8,14 +8,21 @@ function CharacterDetails({ findCharacter }) {
   const characterFound = findCharacter(idCharacter);
   if (characterFound === undefined) {
     return (
-      <article>
-        <h2>Personaje no encontrado</h2>
-        <Link to="/">Volver al listado</Link>
+      <article className="detail-null">
+        <h2>¡Lechuza Extraviada y Confundida!</h2>
+        <h3> ¡Mala noticia!</h3>
+        <p>
+          La lechuza mensajera que transportaba los detalles de este personaje
+          fue afectada por un encantamiento.
+        </p>
+        <p>Ha dejado caer el pergamino en algún lugar desconocido.</p>
+        <p>¡No podemos encontrar la ficha del personaje!</p>
+        <Link to="/">Hechizo de Desaparición: Volver a Hogwarts</Link>
       </article>
     );
   }
   return (
-    <>
+    <div className="detail-container">
       <Link to="/" className="details-link">
         Volver a Hogwarts
       </Link>
@@ -39,7 +46,7 @@ function CharacterDetails({ findCharacter }) {
           </dl>
         </section>
       </article>
-    </>
+    </div>
   );
 }
 

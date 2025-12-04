@@ -86,7 +86,7 @@ function App() {
                   filterHouse={filterHouse} //valor del filtro
                 />
                 {/* --------------------------- lista ---------------------------*/}
-                <h2 className="list-title"> Comunidad de Magos y Brujas </h2>
+                <h2 className="list-title"> Comunidad de Brujas y Magos </h2>
                 <CharacterList characters={filteredCharacters} />
                 {/* ---------------------------  ---------------------------*/}
               </div>
