@@ -2,7 +2,7 @@ function FilterName({ handleFilterName, filterName }) {
   return (
     <form className="filter-group">
       <label htmlFor="filterByCharacter" className="label-character">
-        Personaje
+        Búsqueda de Brujas y Magos
       </label>
       <input
         className="filter-input"

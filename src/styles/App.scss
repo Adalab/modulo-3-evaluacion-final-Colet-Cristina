@@ -38,8 +38,18 @@ body {
 }
 
 .header {
+  height: 11rem;
+  width: 100%;
   text-align: center;
   border-bottom: solid 0.5rem rgba(131, 4, 4, 0.438);
+  background-image: url("/harry.png");
+  background-size: cover;
+
+  /* Evita que se repita si la imagen es pequeña */
+  background-repeat: no-repeat;
+
+  /* Centra la imagen */
+  background-position: center 55%;
 
   .title {
     line-height: 4rem;
@@ -51,11 +61,23 @@ body {
   padding: 2rem;
 }
 
-.filter-group,
+.container {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+/*------------------- FILTROS ----------------------*/
+.filter-group {
+  display: flex; /* Diseño flexible */
+  align-items: center;
+  gap: 2rem;
+  margin-left: 8.5rem;
+  margin-bottom: 2rem;
+}
 .filter-house {
   display: flex; /* Diseño flexible */
-  align-items: center; /* Alineación vertical */
-  gap: 2rem;
+  align-items: center;
+  margin-left: 10rem;
+  gap: 3.5rem;
   margin-bottom: 2rem;
 }
 
@@ -86,7 +108,7 @@ body {
   background-color: black;
   resize: none;
 }
-
+/*------------------- LISTA ----------------------*/
 .list-title {
   text-align: center;
   margin-bottom: 3rem;
@@ -104,11 +126,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
   gap: 2rem;
 }
-
-.container {
-  max-width: 50rem;
-  margin: 0 auto;
-}
+/*------------------- TARJETA ----------------------*/
 
 .card {
   border: 0.0625rem solid rgba(131, 4, 4, 0.438);
@@ -132,7 +150,7 @@ body {
 .card-title {
   margin-bottom: 1rem;
 }
-/*--------------------------------------------*/
+/*-------------------PAG DETALLE -------------------------*/
 .details-link {
   margin: 20rem;
   padding: 1rem 2rem;

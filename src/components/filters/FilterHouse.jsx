@@ -2,7 +2,7 @@ function FilterHouse({ handleFilterHouse, filterHouse }) {
   return (
     <div className="filter-house">
       <label htmlFor="filterByHouse" className="label-house">
-        Casa
+        Casas de Hogwarts
       </label>
       <select
         className="filter-select"
