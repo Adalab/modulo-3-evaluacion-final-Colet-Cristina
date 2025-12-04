@@ -38,14 +38,13 @@ body {
 }
 
 .header {
-  height: 11rem;
+  height: 10rem;
   width: 100%;
   text-align: center;
   border-bottom: solid 0.5rem rgba(131, 4, 4, 0.438);
   background-image: url("/harry.png");
-  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center 55%;
+  background-position: center 40%;
 
   .title {
     line-height: 4rem;

@@ -1,4 +1,5 @@
 📜 El Censo Mágico de Hogwarts (README) 🏰
+
 ✨ Breve Descripción
 Este es un Archivo de Registro Mágico (aplicación front-end) desarrollado con React y Vite.
 Permite a los usuarios buscar y filtrar personajes del universo de Harry Potter, con un diseño temático y animaciones sutiles.
