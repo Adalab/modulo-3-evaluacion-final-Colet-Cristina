@@ -32,6 +32,7 @@ function CharacterDetails({ findCharacter }) {
           src={characterFound.image}
           alt={"Foto de " + characterFound.name}
         />
+
         <section className="detail-list">
           <h2>{characterFound.name}</h2>
           <dl>

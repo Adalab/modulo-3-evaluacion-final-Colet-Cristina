@@ -87,6 +87,7 @@ function App() {
                 />
                 {/* --------------------------- lista ---------------------------*/}
                 <h2 className="list-title"> Comunidad de Brujas y Magos </h2>
+                <p className="list-motto">Draco dormiens nunquam titillandus</p>
                 <CharacterList characters={filteredCharacters} />
                 {/* ---------------------------  ---------------------------*/}
               </div>
