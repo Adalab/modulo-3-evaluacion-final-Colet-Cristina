@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router";
 import Header from "./layaut/header";
 import CharacterList from "./listing/CharacterList";
-import PlaceholderImage from "/public/placeholder.png";
+import PlaceholderImage from "../images/placeholder.png";
 import CharacterDetails from "./pages/DetailsPage";
 import FilterName from "./filters/FilterName";
 import FilterHouse from "./filters/FilterHouse";
@@ -87,7 +87,6 @@ function App() {
                 />
                 {/* --------------------------- lista ---------------------------*/}
                 <h2 className="list-title"> Comunidad de Brujas y Magos </h2>
-                <p className="list-motto">Draco dormiens nunquam titillandus</p>
                 <CharacterList characters={filteredCharacters} />
                 {/* ---------------------------  ---------------------------*/}
               </div>

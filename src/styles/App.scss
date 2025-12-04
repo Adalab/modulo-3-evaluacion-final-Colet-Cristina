@@ -38,22 +38,17 @@ body {
 }
 
 .header {
-  height: 10rem;
+  height: 11rem;
   width: 100%;
   text-align: center;
   border-bottom: solid 0.5rem rgba(131, 4, 4, 0.438);
-  background-image: url("/harry.png");
+  background-image: url("../images/harry.png");
   background-repeat: no-repeat;
-  background-position: center 40%;
-
-  .title {
-    line-height: 4rem;
-    padding-inline: 2rem;
-  }
+  background-position: center 50%;
 }
 
 .main {
-  background-image: url("/public/lechuzas.png");
+  background-image: url("../images/lechuzas.png");
   padding: 2rem;
 }
 
@@ -370,11 +365,6 @@ body {
     background-image: url("/harry.png");
     background-repeat: no-repeat;
     background-position: center 40%;
-
-    .title {
-      line-height: 4rem;
-      padding-inline: 2rem;
-    }
   }
 
   .main {
@@ -445,6 +435,9 @@ body {
     color: #ffd900;
     /* ⬅️ APLICACIÓN DE LA ANIMACIÓN */
     animation: magicGlow 2s infinite alternate ease-in-out;
+  }
+  .list-motto {
+    text-align: center;
   }
 
   .list-card {
